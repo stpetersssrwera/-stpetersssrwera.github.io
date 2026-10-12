@@ -7,6 +7,51 @@
 
   <!-- BASIC SEARCH ENGINE SEO -->
   <title>St. Peter's Secondary School Rwera, Ntungamo, Uganda</title>
+  
+<script>
+(() => {
+  const motto = document.getElementById("motto-typewriter");
+  if (!motto) return;
+
+  const phrase = "Invest in Education";
+  const typingSpeed = 120;
+  const deletingSpeed = 65;
+  const pauseAtEnd = 1600;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) {
+    motto.textContent = phrase;
+    return;
+  }
+
+  let index = 0;
+  let deleting = false;
+
+  function animate() {
+    motto.textContent = phrase.slice(0, index);
+
+    if (!deleting && index < phrase.length) {
+      index++;
+      setTimeout(animate, typingSpeed);
+    } else if (!deleting) {
+      deleting = true;
+      setTimeout(animate, pauseAtEnd);
+    } else if (index > 0) {
+      index--;
+      setTimeout(animate, deletingSpeed);
+    } else {
+      deleting = false;
+      setTimeout(animate, 450);
+    }
+  }
+
+  animate();
+})();
+</script>
+
 
   <meta name="description"
         content="Discover St. Peter's Secondary School – Rwera in Ntungamo District, Uganda. Learn about our school, admissions, academics, student activities, school gallery and contact information. Invest in Education.">
@@ -125,7 +170,18 @@
 <body>
   <div class="topbar"><div class="container top-inner"><span>📍 Rwera, Kakukuru – Rwenanura T/C, Ntungamo District</span><div><a href="mailto:st.petersssrwera2019@gmail.com">✉ st.petersssrwera2019@gmail.com</a><a href="tel:+256782854642">☎ +256 782 854642</a></div></div></div>
   <header class="masthead"><div class="container mast-inner"><a class="brand" href="#home"><img src="assets/school logo.jpg" alt="St Peter’s Secondary School badge"><span><strong>ST. PETER’S</strong><b>SECONDARY SCHOOL – RWERA</b><small>Ntungamo District, Uganda</small></span></a><div class="motto">INVEST IN EDUCATION<i></i></div><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button></div></header>
-  <nav class="nav"><div class="container nav-inner"><a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#admissions">Admissions</a><a href="#academics">Academics</a><a href="#gallery">Gallery</a><a href="#news">News & Announcements</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div></nav>
+  <nav class="nav"><div class="container nav-inner"><a class="active" href="#home">Home</a><a href="#about">About Us</a><a href="#admissions">Admissions</a><a href="#academics">Academics</a><a href="#gallery">Gallery</a><a href="#news">News & Announcements</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div></nav>          
+
+
+
+
+<div class="hero-note typewriter-motto">
+  <span id="motto-typewriter" aria-label="Invest in Education"></span>
+  <span class="typewriter-cursor" aria-hidden="true"></span>
+</div>
+
+
+  
   <main>
     <section class="hero" id="home"><div class="hero-photo" role="img" aria-label="School buildings and grounds"></div><div class="hero-shade"></div><div class="container hero-content"><div class="hero-copy"><p class="eyebrow">WELCOME TO OUR SCHOOL</p><h1>St. Peter’s Secondary School <em>– Rwera</em></h1><p class="lead">A government-aided secondary school with a Catholic foundation, welcoming learners from all religious backgrounds.</p><span class="gold-line"></span><div class="actions"><a class="btn gold" href="#about">Explore Our School <span>→</span></a><a class="btn outline" href="#gallery">Explore Our Campus <span>▶</span></a></div></div><div class="hero-note">Invest<br>in<br>Education</div></div><div class="hero-bottom"><span>LEARN</span><span>GROW</span><span>LEAD</span></div></section>
     <section class="values"><div class="container value-grid"><article><span class="value-icon">✦</span><h3>Quality Education</h3><p>Building a strong foundation for the future.</p></article><article><span class="value-icon">♢</span><h3>Discipline & Character</h3><p>Encouraging responsibility and respect.</p></article><article><span class="value-icon">♧</span><h3>Inclusive Community</h3><p>Every learner deserves an opportunity.</p></article><article><span class="value-icon">★</span><h3>Excellence</h3><p>Committed to learning and personal growth.</p></article><article><span class="value-icon">♡</span><h3>Community Focus</h3><p>Working together for a brighter future.</p></article></div></section>
